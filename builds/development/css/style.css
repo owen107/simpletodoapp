@@ -4,25 +4,31 @@ body {
   color: #333;
   font-family: Lato, sans-serif;
 }
+
 .container {
   display: block;
   width: 400px;
   margin: 100px auto 0;
 }
+
 ul {
   margin: 0;
   padding: 0;
 }
+
 li * {
   float: left;
 }
+
 li, h3 {
   clear:both;
   list-style:none;
 }
+
 input, button {
   outline: none;
 }
+
 button {
   background: none;
   border: 0px;
@@ -33,9 +39,11 @@ button {
   font-family: Lato, sans-serif;
   cursor: pointer;
 }
+
 button:hover {
   color: #333;
 }
+
 /* Heading */
 h3,
 label[for='new-task'] {
@@ -43,10 +51,24 @@ label[for='new-task'] {
   font-weight: 700;
   font-size: 15px;
   border-bottom: 2px solid #333;
-  padding: 30px 0 10px;
+  padding: 30px 0 5px;
   margin: 0;
   text-transform: uppercase;
 }
+
+span.doClearAll {
+  float: right;
+  display: none;
+}
+
+span.doClearAll a {
+  text-decoration: none;
+  font-size: 0.9em;
+  color: red;
+  padding-top: 5px;
+  text-transform: capitalize;
+}
+
 input[type="text"] {
   margin: 0;
   font-size: 18px;
@@ -87,9 +109,9 @@ li > input[type="checkbox"] {
   position: relative;
   top: 15px;
 }
-li > label {
+li > p {
   font-size: 18px;
-  line-height: 40px;
+  line-height: 4px;
   width: 237px;
   padding: 0 0 0 11px;
 }
@@ -99,9 +121,15 @@ li >  input[type="text"] {
 li > .delete:hover {
   color: #CF2323;
 }
+/*label[for='chbstyle'] {
+  display: block;
+  background-color: red;
+  width: 40px;
+  height: 40px;
+}*/
 
 /* Completed */
-#completed-tasks label {
+#completed-tasks p {
   text-decoration: line-through;
   color: #888;
 }
@@ -115,6 +143,6 @@ ul li.editMode input[type=text] {
   display:block;
 }
 
-ul li.editMode label {
+ul li.editMode p {
   display:none;
 }
