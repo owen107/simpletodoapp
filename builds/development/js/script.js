@@ -4,7 +4,7 @@ $(document).ready(function() {
     var addBtn = $('#addToDo');
     var incompleteTasksHolder = $('#incomplete-tasks');
     var completedTasksHolder = $('#completed-tasks');
-
+    
     var createNewToDoItem = function(taskInputValue) {
     	var $listItem = $('<li></li>');
 
@@ -109,12 +109,11 @@ $(document).ready(function() {
             } else {
               swal("Cancelled", "The task is safe :)", "error");
             }
-          });  
+        });  
     }
 
     var taskCompleted = function(e) {
     	var listItem = $(this).parent().parent();
-    	console.log('taskCompleted!');
     	completedTasksHolder.append(listItem);
     	bindTaskEvents(listItem, taskIncomplete);
 
@@ -138,9 +137,8 @@ $(document).ready(function() {
     }
 
     var bindTaskEvents = function(taskListItem, checkBoxEventHandler) {
-    	console.log("bind Event!");
 
-    	var checkBox = taskListItem.find('input[type="checkbox"]');
+    	// var checkBox = taskListItem.find('input[type="checkbox"]');
     	var label = taskListItem.find('label');
     	var editBtn = taskListItem.find('button.edit');
     	var deleteBtn = taskListItem.find('button.delete');
